@@ -7,8 +7,8 @@ import java.util.Map;
 public class PASSENGER_TYPE {
     public static final Map<String, String> PASSENGER_TYPE = createPassengerTypeMap();
 
-    public static String getCode(String krName){
-        return PASSENGER_TYPE.getOrDefault(krName, null);
+    public static String getName(String code){
+        return PASSENGER_TYPE.getOrDefault(code, null);
     }
 
     private static Map<String, String> createPassengerTypeMap() {

@@ -7,8 +7,8 @@ import java.util.Map;
 public class TRAIN_NAME {
     public static final Map<String, String> TRAIN_NAME = createTrainNameMap();
 
-    public static String getTrainName(String krName){
-        return TRAIN_NAME.getOrDefault(krName, null);
+    public static String getTrainName(String code){
+        return TRAIN_NAME.getOrDefault(code, null);
     }
 
     private static Map<String, String> createTrainNameMap() {

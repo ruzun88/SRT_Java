@@ -3,12 +3,22 @@ package kor.ruzun88.java.srt.constant;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class STATION_CODE {
     public static final Map<String, String> STATION_CODE = createStationMap();
 
     public static String getCode(String krName){
         return STATION_CODE.getOrDefault(krName, null);
+    }
+    public static String getName(String code){
+        for (Map.Entry<String, String> entry : STATION_CODE.entrySet()) {
+            if (entry.getValue().equals(code)) {
+                return entry.getKey();
+            }
+        }
+        return null;
     }
 
     private static Map<String, String> createStationMap() {
